@@ -1,0 +1,398 @@
+@import "tailwindcss";
+
+/* Custom Design Tokens */
+@layer base {
+  :root {
+    /* Color Palette - Light Mode */
+    --color-primary: 59 130 246; /* blue-500 */
+    --color-primary-dark: 37 99 235; /* blue-600 */
+    --color-secondary: 99 102 241; /* indigo-500 */
+    --color-accent: 168 85 247; /* purple-500 */
+
+    --color-background: 255 255 255; /* white */
+    --color-surface: 249 250 251; /* gray-50 */
+    --color-surface-hover: 243 244 246; /* gray-100 */
+
+    --color-text-primary: 17 24 39; /* gray-900 */
+    --color-text-secondary: 75 85 99; /* gray-600 */
+    --color-text-tertiary: 156 163 175; /* gray-400 */
+
+    --color-border: 229 231 235; /* gray-200 */
+    --color-border-hover: 209 213 219; /* gray-300 */
+
+    /* Typography Scale */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, Menlo, Monaco, monospace;
+
+    /* Spacing Scale (extends Tailwind) */
+    --spacing-section: 6rem; /* 96px */
+    --spacing-component: 3rem; /* 48px */
+
+    /* Border Radius */
+    --radius-sm: 0.375rem; /* 6px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem; /* 16px */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark Mode Colors */
+  .dark {
+    --color-background: 17 24 39; /* gray-900 */
+    --color-surface: 31 41 55; /* gray-800 */
+    --color-surface-hover: 55 65 81; /* gray-700 */
+
+    --color-text-primary: 249 250 251; /* gray-50 */
+    --color-text-secondary: 209 213 219; /* gray-300 */
+    --color-text-tertiary: 156 163 175; /* gray-400 */
+
+    --color-border: 55 65 81; /* gray-700 */
+    --color-border-hover: 75 85 99; /* gray-600 */
+  }
+
+  /* Global Styles */
+  * {
+    border-color: rgb(var(--color-border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-text-primary));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom Utility Classes */
+  .bg-background {
+    background-color: rgb(var(--color-background));
+  }
+
+  .text-text-primary {
+    color: rgb(var(--color-text-primary));
+  }
+
+  .text-text-secondary {
+    color: rgb(var(--color-text-secondary));
+  }
+
+  .text-text-tertiary {
+    color: rgb(var(--color-text-tertiary));
+  }
+
+  .border-border {
+    border-color: rgb(var(--color-border));
+  }
+
+  .border-border-hover {
+    border-color: rgb(var(--color-border-hover));
+  }
+
+  /* Focus Styles */
+  .focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(var(--color-background)),
+      0 0 0 4px rgb(59 130 246);
+  }
+
+  /* Gradient Utilities */
+  .gradient-primary {
+    background-image: linear-gradient(
+      to right,
+      rgb(59 130 246),
+      rgb(99 102 241)
+    );
+  }
+
+  .gradient-accent {
+    background-image: linear-gradient(
+      to right,
+      rgb(168 85 247),
+      rgb(236 72 153)
+    );
+  }
+
+  /* Animation Utilities */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+
+  /* Slow Pulse Animations for Background */
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes pulse-slow-delay {
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.1);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow-delay {
+    animation: pulse-slow-delay 10s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  /* Glow effect for interactive elements */
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+}
+
+/* Component Layer - Reusable patterns */
+@layer components {
+  /* Button Variants */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-primary {
+    background-color: rgb(59 130 246);
+    color: white;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background-color: rgb(37 99 235);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    background-color: rgb(29 78 216);
+  }
+
+  .btn-secondary {
+    background-color: rgb(var(--color-surface));
+    color: rgb(var(--color-text-primary));
+    border: 1px solid rgb(var(--color-border));
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background-color: rgb(var(--color-surface-hover));
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background-color: rgb(var(--color-surface-hover));
+  }
+
+  /* Card Component */
+  .card {
+    background-color: rgb(var(--color-surface));
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--color-border));
+    padding: 1.5rem;
+    transition: all 0.2s;
+  }
+
+  .card-hover {
+    background-color: rgb(var(--color-surface));
+    border-radius: 0.75rem;
+    border: 1px solid rgb(var(--color-border));
+    padding: 1.5rem;
+    transition: all 0.2s;
+  }
+
+  .card-hover:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    border-color: rgb(var(--color-border-hover));
+  }
+
+  /* Section Container */
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .container-custom {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Typography */
+  .heading-1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-1 {
+      font-size: 3.75rem;
+    }
+  }
+
+  .heading-2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-2 {
+      font-size: 3rem;
+    }
+  }
+
+  .heading-3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  .heading-4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    .heading-4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .body-large {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-secondary));
+  }
+
+  .body {
+    font-size: 1rem;
+    color: rgb(var(--color-text-secondary));
+  }
+}
