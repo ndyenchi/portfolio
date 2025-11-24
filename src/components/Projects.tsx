@@ -29,7 +29,8 @@ export function Projects() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
 
               <div className="relative rounded-2xl border border-border overflow-hidden transition-all group-hover:border-blue-500/50 group-hover:shadow-2xl">
-                {/* Project Image/Placeholder */}
+              
+               {/* Project Image/Placeholder */}
                 {project.image ? (
                   <div className="relative h-52 overflow-hidden">
                     <img
