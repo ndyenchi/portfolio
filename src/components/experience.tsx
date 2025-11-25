@@ -35,7 +35,7 @@ export function Experience() {
                 }}
               >
                 {/* Timeline line */}
-                <div className="absolute left-0 top-2 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent" />
+                <div className="absolute left-0 top-2 bottom-0 w-px bg-linear-to-b from-blue-500 via-purple-500 to-transparent" />
 
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-2 -translate-x-1/2 w-3 h-3 rounded-full bg-blue-500 border-4 border-background group-hover:scale-150 transition-transform">
@@ -43,7 +43,7 @@ export function Experience() {
                 </div>
 
                 {/* Hover glow effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-300"></div>
+                <div className="absolute -inset-4 bg-linear-to-r from-blue-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-300"></div>
 
                 {/* Content */}
                 <div className="relative card-hover rounded-2xl transition-all group-hover:shadow-2xl">
@@ -56,16 +56,41 @@ export function Experience() {
                         {exp.company}
                       </p>
                       <p className="text-sm text-text-tertiary flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
                         </svg>
                         {exp.location}
                       </p>
                     </div>
                     <div className="mt-2 md:mt-0 flex items-center gap-2 text-sm text-text-secondary bg-blue-500/10 px-3 py-1 rounded-full">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
                       </svg>
                       {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
                     </div>
