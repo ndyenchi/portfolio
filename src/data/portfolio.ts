@@ -111,7 +111,7 @@ export const projects: Project[] = [
       "Implemented core trading modules including Order Form, Order Book, Trading History, Filters, Account Management, Orders, Bots, and Economic Calendar.",
       "Collaborated closely with the backend team to refine API specifications, improve data workflows, and enhance platform stability.",
     ],
-    image: "/projects/sinbad.png",
+    image: "./projects/sinbad.png",
   },
   {
     id: "2",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "Built detail modules including Sales Order Detail, Delivery Order Detail, and Project Detail (status, tracking code, address,timeline, person in charge).",
       "Collaborated closely with BA and customer-provided backend team.",
     ],
-    image: "/projects/oms-frontend.png",
+    image: "./projects/oms-frontend.png",
   },
   {
     id: "3",
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://portfolio-five-teal-oc2qtiydyf.vercel.app/",
     githubUrl: "https://github.com/ndyenchi/ExpenseTracker",
-    image: "/projects/expense-tracker.png",
+    image: "./projects/expense-tracker.png",
   },
 ];
 
@@ -183,5 +183,5 @@ export const personalInfo = {
   title: "Frontend Developer",
   bio: "Frontend Developer with 3 years of experience in developing web applications. Strong in TypeScript and modern UI frameworks (Tailwind, MUI, Mantine). Fullstack background with experience in Java Spring Boot, Node.js, and databases (PostgreSQL, MySQL, MongoDB).",
   resumeUrl: "/src/resume.pdf",
-  avatar: "/avatar.jpeg",
+  avatar: "./avatar.jpeg",
 };
