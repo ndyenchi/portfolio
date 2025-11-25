@@ -41,7 +41,6 @@ export function Projects() {
 
                     {/* Overlay for buttons */}
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-3 z-20 pointer-events-auto">
-                      {" "}
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}

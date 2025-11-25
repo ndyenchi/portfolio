@@ -54,7 +54,7 @@ export function Skills() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-blue-500 uppercase tracking-wider bg-blue-500/10 px-4 py-2 rounded-full">
+            <span className="text-sm font-semibold text-blue-500 uppercase tracking-wider">
               Expertise
             </span>
           </div>
