@@ -172,8 +172,9 @@ export const education: Education = {
 };
 
 export const contactInfo: ContactInfo = {
-  email: "nguyendoyenchị@gmail.com",
-  location: "Ho Chi Minh city",
+  email: "nguyendoyenchi215@gmail.com",
+  phone: "039377215",
+  location: "Ho Chi Minh City, Vietnam",
   linkedin: "https://www.linkedin.com/in/ndyenchi",
   github: "https://github.com/ndyenchi",
 };
