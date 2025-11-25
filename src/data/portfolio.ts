@@ -114,6 +114,7 @@ export const projects: Project[] = [
       "Implemented core trading modules including Order Form, Order Book, Trading History, Filters, Account Management, Orders, Bots, and Economic Calendar.",
       "Collaborated closely with the backend team to refine API specifications, improve data workflows, and enhance platform stability.",
     ],
+    liveUrl: "https://vercel.com/yenchis-projects/portfolio",
   },
   {
     id: "2",
