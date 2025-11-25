@@ -182,4 +182,5 @@ export const personalInfo = {
   title: "Frontend Developer",
   bio: "Frontend Developer with nearly 3 years of experience in developing web applications. Strong in TypeScript and modern UI frameworks (Tailwind, MUI, Mantine). Fullstack background with experience in Java Spring Boot, Node.js, and databases (PostgreSQL, MySQL, MongoDB).",
   resumeUrl: "/src/resume.pdf",
+  avatar: "../src/assets/avatar.jpeg",
 };
