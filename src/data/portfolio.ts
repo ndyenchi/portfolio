@@ -41,7 +41,6 @@ export interface ContactInfo {
   website?: string;
 }
 
-// Sample Data (replace with your actual data)
 export const skills: Skill[] = [
   { name: "React", category: "frontend" },
   { name: "TypeScript", category: "frontend" },
@@ -70,11 +69,9 @@ export const experiences: Experience[] = [
     location: "Ho Chi Minh city",
     startDate: "2023-7",
     endDate: "Present",
-    // TODO:
     description: [
       "Developed and maintained web applications using React and TypeScript",
       "Collaborated with cross-functional teams to deliver high-quality features",
-      "Improved application performance by 40% through code optimization",
     ],
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
   },
@@ -85,11 +82,11 @@ export const experiences: Experience[] = [
     location: "Ho Chi Minh city",
     startDate: "2022-6",
     endDate: "2023-3",
-    // TODO:
     description: [
-      "Developed and maintained web applications using React and TypeScript",
-      "Collaborated with cross-functional teams to deliver high-quality features",
-      "Improved application performance by 40% through code optimization",
+      "Maintained and enhanced the existing system as part of an outsourced project.",
+      "Worked with Java (Spring Boot, JSF), Angular, PostgreSQL, MySQL, and MongoDB.",
+      "Collaborated within an Agile Scrum framework, using Jira for task management.",
+      "Managed source code and version control using Git.",
     ],
     technologies: [
       "Java (Spring Boot)",
