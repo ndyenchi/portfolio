@@ -159,7 +159,7 @@ export const projects: Project[] = [
       "Export to Excel/CSV",
       "User-friendly UI with dark mode support",
     ],
-    liveUrl: "https://portfolio-five-teal-oc2qtiydyf.vercel.app/",
+    liveUrl: "https://expense-tracker-ivory-sigma-72.vercel.app/  ",
     githubUrl: "https://github.com/ndyenchi/ExpenseTracker",
     image: "./projects/expense-tracker.png",
   },
@@ -183,6 +183,6 @@ export const personalInfo = {
   name: "Nguyen Do Yen Chi",
   title: "Frontend Developer",
   bio: "Frontend Developer with 3 years of experience in developing web applications. Strong in TypeScript and modern UI frameworks (Tailwind, MUI, Mantine). Fullstack background with experience in Java Spring Boot, Node.js, and databases (PostgreSQL, MySQL, MongoDB).",
-  resumeUrl: "/src/resume.pdf",
+  resumeUrl: "./resume.html",
   avatar: "./avatar.jpeg",
 };
