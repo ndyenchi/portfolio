@@ -173,7 +173,7 @@ export const education: Education = {
 
 export const contactInfo: ContactInfo = {
   email: "nguyendoyenchi215@gmail.com",
-  phone: "039377215",
+  phone: "039 337 7215",
   location: "Ho Chi Minh City, Vietnam",
   linkedin: "https://www.linkedin.com/in/ndyenchi",
   github: "https://github.com/ndyenchi",
@@ -183,6 +183,6 @@ export const personalInfo = {
   name: "Nguyen Do Yen Chi",
   title: "Frontend Developer",
   bio: "Frontend Developer with 3 years of experience in developing web applications. Strong in TypeScript and modern UI frameworks (Tailwind, MUI, Mantine). Fullstack background with experience in Java Spring Boot, Node.js, and databases (PostgreSQL, MySQL, MongoDB).",
-  resumeUrl: "./resume.html",
+  resumeUrl: "./resume.pdf",
   avatar: "./avatar.jpeg",
 };
