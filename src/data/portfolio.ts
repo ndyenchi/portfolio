@@ -159,7 +159,7 @@ export const projects: Project[] = [
       "Export to Excel/CSV",
       "User-friendly UI with dark mode support",
     ],
-    liveUrl: "https://expense-tracker-ivory-sigma-72.vercel.app/  ",
+    liveUrl: "https://yc-expense-tracker.vercel.app/",
     githubUrl: "https://github.com/ndyenchi/ExpenseTracker",
     image: "./projects/expense-tracker.png",
   },
