@@ -44,21 +44,25 @@ export interface ContactInfo {
 export const skills: Skill[] = [
   { name: "React", category: "frontend" },
   { name: "TypeScript", category: "frontend" },
+  { name: "Angular", category: "frontend" },
   { name: "Tailwind CSS", category: "frontend" },
   { name: "Mantine", category: "frontend" },
-  { name: "Vite", category: "frontend" },
-  { name: "Mui", category: "frontend" },
+  { name: "MUI", category: "frontend" },
+  { name: "Shadcn", category: "frontend" },
+  { name: "Zustand", category: "frontend" },
 
   { name: "Node.js", category: "backend" },
-  { name: "Java", category: "backend" },
   { name: "Express", category: "backend" },
+  { name: "Java", category: "backend" },
   { name: "PostgreSQL", category: "backend" },
 
+  { name: "Vite", category: "tools" },
   { name: "Git", category: "tools" },
   { name: "Docker", category: "tools" },
   { name: "ESLint", category: "tools" },
   { name: "Figma", category: "tools" },
   { name: "Postman", category: "tools" },
+  { name: "Jira", category: "tools" },
 ];
 
 export const experiences: Experience[] = [
