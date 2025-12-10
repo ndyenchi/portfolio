@@ -1,174 +1,113 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
+A modern, responsive personal portfolio website built with React, TypeScript, and Tailwind CSS. Showcases professional experience, projects, skills, and contact information with a clean, user-friendly interface.
 
 ## Features
 
-### ✨ UI/UX Implementation
-- **Clean, minimalistic design** with consistent spacing, typography, and color palette
-- **Light & Dark mode** support with system preference detection
-- **Responsive layout** optimized for desktop, tablet, and mobile devices
-- **Smooth animations** with fade-in, slide-in effects, and micro-interactions
-- **Modular design system** with reusable components and consistent styling
-
-### 🧩 Component Architecture
-- **Navbar** - Scroll detection with active section highlighting and mobile menu
-- **Hero Section** - Animated welcome section with call-to-action buttons
-- **Education** - Academic background display with achievements
-- **Experience** - Timeline view of work history with technologies
-- **Projects** - Grid layout with project cards, hover effects, and links
-- **Skills** - Categorized skill display with visual grouping
-- **Contact** - Contact form with validation and social links
-- **Footer** - Social media links and copyright information
-
-### 🎨 Design System
-- **Custom CSS Variables** for colors, spacing, typography, and shadows
-- **Light/Dark Mode** with automatic theme detection and persistence
-- **Responsive Breakpoints** following mobile-first approach
-- **Reusable Button Styles** (primary, secondary, ghost variants)
-- **Card Components** with hover states and transitions
-- **Typography Scale** with responsive sizing
-- **Custom Animations** for enhanced user experience
-
-### ⚡ Performance Optimizations
-- **Build Size**: 24.5 KB CSS, 218 KB JS (gzipped: 5.4 KB CSS, 66.5 KB JS)
-- **Vite** for fast development and optimized production builds
-- **Tree-shaking** and code splitting for minimal bundle size
-- **Optimized images** with lazy loading support
-- **CSS-in-JS** avoided in favor of vanilla CSS for better performance
-
-### ♿ Accessibility & SEO
-- **WCAG-compliant** contrast ratios and semantic HTML
-- **ARIA labels** for interactive elements
-- **Keyboard navigation** support throughout
-- **SEO meta tags** including Open Graph and Twitter Cards
-- **Semantic HTML5** structure for better search engine indexing
+- **Responsive Design**: Fully responsive layout optimized for all devices
+- **Dark Mode**: Toggle between light and dark themes with persistent preference
+- **Interactive UI**: Smooth animations and transitions for enhanced user experience
+- **Animated Background**: Dynamic visual effects for aesthetic appeal
+- **Project Showcase**: Detailed project cards with live demos and GitHub links
+- **Experience Timeline**: Professional work history with technologies used
+- **Skills Display**: Categorized skill set (Frontend, Backend, Tools)
+- **Contact Information**: Easy access to email, phone, LinkedIn, and GitHub
+- **Resume Download**: Direct download link for CV/Resume
 
 ## Tech Stack
 
-- **React 19.2.0** - UI library with latest features
-- **TypeScript** - Type safety and better developer experience
-- **Vite** - Fast build tool and development server
+### Core
+
+- **React 19** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
 - **Tailwind CSS v4** - Utility-first CSS framework
-- **ESLint** - Code quality and consistency
+
+### Development Tools
+
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+- **gh-pages** - Automated GitHub Pages deployment
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js 18+ and npm/yarn
+
+- Node.js (v18 or higher recommended)
+- Yarn or npm package manager
 
 ### Installation
 
+1. Clone the repository:
+
 ```bash
-# Install dependencies
+git clone https://github.com/ndyenchi/portfolio.git
+cd portfolio
+```
+
+2. Install dependencies:
+
+```bash
+yarn install
+# or
 npm install
+```
 
-# Start development server
+### Development
+
+Start the development server:
+
+```bash
+yarn dev
+# or
 npm run dev
+```
 
-# Build for production
+The application will be available at `http://localhost:5173`
+
+### Build
+
+Create a production build:
+
+```bash
+yarn build
+# or
 npm run build
+```
 
-# Preview production build
+The built files will be in the `dist` directory.
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+yarn preview
+# or
 npm run preview
-
-# Run linter
-npm run lint
 ```
 
-## Project Structure
+### Deployment
 
-```
-portfolio/
-├── src/
-│   ├── components/         # React components
-│   │   ├── Navbar.tsx
-│   │   ├── home.tsx
-│   │   ├── education.tsx
-│   │   ├── experience.tsx
-│   │   ├── Projects.tsx
-│   │   ├── skills.tsx
-│   │   ├── contact.tsx
-│   │   ├── Footer.tsx
-│   │   └── ThemeToggle.tsx
-│   ├── contexts/          # React contexts
-│   │   └── ThemeContext.tsx
-│   ├── data/             # Portfolio data
-│   │   └── portfolio.ts
-│   ├── styles/           # Global styles
-│   │   └── index.css
-│   ├── App.tsx           # Main app component
-│   └── main.tsx          # Entry point
-├── public/               # Static assets
-├── index.html           # HTML template
-├── vite.config.ts       # Vite configuration
-├── tsconfig.json        # TypeScript configuration
-└── package.json         # Dependencies and scripts
-```
-
-## Customization
-
-### Update Your Information
-
-Edit `/src/data/portfolio.ts` to update:
-- Personal information (name, title, bio)
-- Skills and technologies
-- Work experience
-- Projects
-- Education
-- Contact information
-
-### Theme Colors
-
-Modify CSS variables in `/src/styles/index.css`:
-```css
-:root {
-  --color-primary: 59 130 246;  /* Primary color */
-  --color-secondary: 99 102 241; /* Secondary color */
-  /* ... other colors */
-}
-```
-
-### SEO Meta Tags
-
-Update meta tags in `/index.html`:
-- Title, description, keywords
-- Open Graph tags for social sharing
-- Twitter Card information
-
-## Deployment
-
-### Vercel (Recommended)
+Deploy to GitHub Pages:
 
 ```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-### Netlify
-
-```bash
-# Build
-npm run build
-
-# Deploy dist folder to Netlify
-```
-
-### GitHub Pages
-
-```bash
-# Install gh-pages
-npm install --save-dev gh-pages
-
-# Add to package.json scripts:
-# "deploy": "npm run build && gh-pages -d dist"
-
-# Deploy
+yarn deploy
+# or
 npm run deploy
 ```
+
+This will build the project and deploy to the `gh-pages` branch.
+
+## Scripts
+
+| Command        | Description              |
+| -------------- | ------------------------ |
+| `yarn dev`     | Start development server |
+| `yarn build`   | Build for production     |
+| `yarn preview` | Preview production build |
+| `yarn lint`    | Run ESLint               |
+| `yarn deploy`  | Deploy to GitHub Pages   |
 
 ## Browser Support
 
@@ -177,19 +116,14 @@ npm run deploy
 - Safari (latest)
 - Edge (latest)
 
-## Performance Metrics
+## Contact
 
-- **Lighthouse Score**: 90+ (Performance, Accessibility, Best Practices, SEO)
-- **First Contentful Paint**: <1.5s
-- **Time to Interactive**: <3s
-- **Bundle Size**: <250 KB (JS + CSS)
+**Nguyen Do Yen Chi**
 
-## License
+- Email: nguyendoyenchi215@gmail.com
+- LinkedIn: [ndyenchi](https://www.linkedin.com/in/ndyenchi)
+- GitHub: [ndyenchi](https://github.com/ndyenchi)
 
-MIT License - feel free to use this template for your own portfolio.
+---
 
-## Acknowledgments
-
-- Design inspired by modern portfolio best practices
-- Built with React and Tailwind CSS
-- Icons from Heroicons (embedded SVG)
+Built with using React + TypeScript + Vite + Tailwind CSS

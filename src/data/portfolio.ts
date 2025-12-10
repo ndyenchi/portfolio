@@ -30,6 +30,8 @@ export interface Education {
   id: string;
   school: string;
   degree: string;
+  startDate: string;
+  endDate: string;
 }
 
 export interface ContactInfo {
@@ -176,6 +178,8 @@ export const education: Education = {
   id: "1",
   school: "Posts and Telecommunications Institute of Technology",
   degree: "Information Systems",
+  startDate: "2018-9",
+  endDate: "2023-6",
 };
 
 export const contactInfo: ContactInfo = {
