@@ -118,7 +118,7 @@ export const projects: Project[] = [
       "Collaborated closely with the backend team to refine API specifications, improve data workflows, and enhance platform stability.",
     ],
     image: "./projects/sinbad.png",
-    liveUrl: "https://beta.sinbadgo.ai/",
+    // liveUrl: "https://beta.sinbadgo.ai/",
   },
   {
     id: "2",
