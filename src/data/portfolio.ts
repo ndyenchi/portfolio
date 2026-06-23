@@ -52,6 +52,7 @@ export const skills: Skill[] = [
   { name: "MUI", category: "frontend" },
   { name: "Shadcn", category: "frontend" },
   { name: "Zustand", category: "frontend" },
+  { name: "Ant Design", category: "frontend" },
 
   { name: "Node.js", category: "backend" },
   { name: "Express", category: "backend" },
@@ -69,12 +70,28 @@ export const skills: Skill[] = [
 
 export const experiences: Experience[] = [
   {
+    id: "0",
+    company: "Green Speed",
+    position: "Frontend Developer",
+    location: "Ho Chi Minh city",
+    startDate: "2026-1",
+    endDate: "Present",
+    description: [
+      "Developed and maintained Tendoo, a Retail & Business Management Platform (onsite at Viettel) using React and TypeScript",
+      "Implemented features for kitchen display systems (KDS), and pharmacy operations",
+      "Maintained and enhanced modules for POS, inventory management, workforce management, and product management",
+      "Built reusable UI components and optimized data fetching with React Query and Zustand",
+      "Collaborated with cross-functional teams to deliver scalable and user-friendly business solutions",
+    ],
+    technologies: ["React", "TypeScript", ""],
+  },
+  {
     id: "1",
     company: "SAIGONTEK",
     position: "Frontend Developer",
     location: "Ho Chi Minh city",
     startDate: "2023-7",
-    endDate: "Present",
+    endDate: "2025-12",
     description: [
       "Developed and maintained web applications using React and TypeScript",
       "Collaborated with cross-functional teams to deliver high-quality features",
@@ -105,6 +122,19 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: "0",
+    title: "Multi-Account Crypto Trading Tool",
+    technologies: ["React", "TypeScript", "Vite", "Ant Design"],
+    highlights: [
+      "Developed a comprehensive retail and business management platform supporting POS, customer management, workforce management, inventory management, order processing, kitchen display systems (KDS), and pharmacy operations.",
+      "Built and maintained core modules including kitchen management and pharmacy management.",
+      "Built reusable UI components and optimized data fetching using React Query and Zustand.",
+      "Collaborated with cross-functional teams to deliver scalable, maintainable, and user-friendly business solutions.",
+    ],
+    image: "./projects/tendoo.png",
+    liveUrl: "https://seller-v2.tendoo.vn/todo",
+  },
   {
     id: "1",
     title: "Multi-Account Crypto Trading Tool",

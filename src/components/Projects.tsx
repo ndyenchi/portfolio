@@ -16,7 +16,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 grid-auto-rows-1fr">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 grid-auto-rows-1fr">
           {projects.map((project, index) => (
             <div
               key={project.id}
