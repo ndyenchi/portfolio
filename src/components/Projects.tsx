@@ -1,7 +1,11 @@
-import { projects } from "../data/portfolio";
+import { useState } from "react";
+import { projects, type Project } from "../data/portfolio";
 
 export function Projects() {
+  const [galleryProject, setGalleryProject] = useState<Project | null>(null);
+
   return (
+    <>
     <section id="projects" className="section">
       <div className="container-custom">
         <div className="text-center mb-16">
@@ -31,10 +35,13 @@ export function Projects() {
               <div className="relative h-full card-hover rounded-2xl transition-all group-hover:shadow-2xl flex flex-col ">
                 {/* <div className="relative h-full rounded-2xl border border-border overflow-hidden transition-all group-hover:border-blue-500/50 group-hover:shadow-2xl flex flex-col"> */}
                 {/* Project Image/Placeholder */}
-                {project.image ? (
-                  <div className="relative h-52 overflow-hidden">
+                {project.images.length > 0 ? (
+                  <div
+                    onClick={() => setGalleryProject(project)}
+                    className="relative h-52 overflow-hidden cursor-pointer"
+                  >
                     <img
-                      src={project.image}
+                      src={project.images[0]}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -46,6 +53,7 @@ export function Projects() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
                         >
                           Live Demo
@@ -56,6 +64,7 @@ export function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-lg hover:bg-gray-900 transition"
                         >
                           Code
@@ -135,5 +144,43 @@ export function Projects() {
         </div>
       </div>
     </section>
+
+    {galleryProject && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+        onClick={() => setGalleryProject(null)}
+      >
+        <div
+          className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl bg-surface p-6"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-xl font-bold text-text-primary">
+              {galleryProject.title}
+            </h3>
+            <button
+              type="button"
+              onClick={() => setGalleryProject(null)}
+              aria-label="Close gallery"
+              className="text-text-secondary hover:text-text-primary transition text-2xl leading-none cursor-pointer"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {galleryProject.images.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt={`${galleryProject.title} screenshot ${i + 1}`}
+                className="w-full h-auto rounded-lg border border-border object-cover"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   );
 }

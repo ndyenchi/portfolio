@@ -19,7 +19,7 @@ export interface Project {
   id: string;
   title: string;
   description?: string;
-  image?: string;
+  images: string[];
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -132,8 +132,8 @@ export const projects: Project[] = [
       "Built reusable UI components and optimized data fetching using React Query and Zustand.",
       "Collaborated with cross-functional teams to deliver scalable, maintainable, and user-friendly business solutions.",
     ],
-    image: "./projects/tendoo.png",
-    liveUrl: "https://seller-v2.tendoo.vn/todo",
+    images: ["./projects/tendoo/index.png"],
+    // liveUrl: "https://seller-v2.tendoo.vn/todo",
   },
   {
     id: "1",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
       "Implemented core trading modules including Order Form, Order Book, Trading History, Filters, Account Management, Orders, Bots, and Economic Calendar.",
       "Collaborated closely with the backend team to refine API specifications, improve data workflows, and enhance platform stability.",
     ],
-    image: "./projects/sinbad.png",
+    images: ["./projects/sinbad/index.png"],
     // liveUrl: "https://beta.sinbadgo.ai/",
   },
   {
@@ -160,7 +160,7 @@ export const projects: Project[] = [
       "Built detail modules including Sales Order Detail, Delivery Order Detail, and Project Detail (status, tracking code, address,timeline, person in charge).",
       "Collaborated closely with BA and customer-provided backend team.",
     ],
-    image: "./projects/oms-frontend.png",
+    images: ["./projects/oms-frontend/index.png"],
   },
   {
     id: "3",
@@ -180,8 +180,8 @@ export const projects: Project[] = [
       "Wrote and optimized SQL queries for PostgreSQL, MySQL, and MongoDB.",
       "Collaborated in a 16-member Agile Scrum team, participating in sprint planning and cross-team integration.",
     ],
-    image: "./projects/kard-app.png",
-    liveUrl: "https://kardapp.com/",
+    images: ["./projects/kard-app/index.png"],
+    // liveUrl: "https://kardapp.com/",
   },
   {
     id: "4",
@@ -200,7 +200,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://yc-expense-tracker.vercel.app/",
     githubUrl: "https://github.com/ndyenchi/ExpenseTracker",
-    image: "./projects/expense-tracker.png",
+    images: ["./projects/expense-tracker/index.png"],
   },
 ];
 
