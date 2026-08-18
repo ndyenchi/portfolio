@@ -124,7 +124,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "0",
-    title: "Multi-Account Crypto Trading Tool",
+    title: "Tendoo — Retail & Business Management Platform",
     technologies: ["React", "TypeScript", "Vite", "Ant Design"],
     highlights: [
       "Developed a comprehensive retail and business management platform supporting POS, customer management, workforce management, inventory management, order processing, kitchen display systems (KDS), and pharmacy operations.",
